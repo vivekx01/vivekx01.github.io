@@ -4,55 +4,203 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vivek | Portfolio</title>
-
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 0 16px;
-            line-height: 1.6;
-        }
-
-        h1 {
-            margin-bottom: 0.2em;
-        }
-
-        .subtitle {
-            color: #555;
-            margin-top: 0;
-        }
-
-        section {
-            margin-top: 32px;
-        }
-    </style>
+    <meta name="description" content="Vivek Shukla, software engineer in Mumbai. React, TypeScript, Python, AI systems with guardrails. Writes on tech and life." />
+    <title>Vivek Shukla / Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <div class="wrap">
+        <header class="site-header">
+            <h1 class="name">Vivek Shukla</h1>
+            <p class="role">Software Engineer</p>
+        </header>
 
-    <h1>Vivek Shukla</h1>
-    <p class="subtitle">Full-Stack Software Engineer</p>
+        <main>
+            <section class="card" aria-labelledby="about-heading">
+                <h2 id="about-heading">About</h2>
+                <p>
+                    I'm a software engineer based in Mumbai. I spend most of my time in React, TypeScript, Python, and the path between what users see and the data and services behind it.
+                    I like following a feature all the way through and leaving code the next person can still read. Lately that's meant a lot of AI-shaped work (copilots, guardrails, agents), and I care whether it still makes sense when production gets noisy.
+                </p>
+                <p>
+                    I write to think: technical pieces and life off the keyboard. If you want more of that voice than fits here, there's the blog.
+                </p>
+                <a class="inline-link" href="/blog">Check my writings</a>
+            </section>
 
-    <section>
-        <h2>About</h2>
-        <p>
-            Full-stack engineer with experience in React, TypeScript, Python, and FastAPI.
-            Interested in developer tooling, performance, and AI-powered systems.
-            <a href="/blog">Check my writings</a>
-        </p>
-    </section>
+            <section class="card" aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Experience</h2>
 
-    <section>
-        <h2>Contact</h2>
-        <p>
-            GitHub: <a href="https://github.com/vivekx01">github.com/vivekx01</a><br />
-            Email: <a href="mailto:vivek77158@gmail.com">vivek77158@gmail.com</a> <br />
-            X: <a href="https://x.com/vivekx01">vivekx01</a> 
-        </p>
-    </section>
+                <article class="job">
+                    <div class="job-head">
+                        <img
+                            class="job-logo"
+                            src="https://www.google.com/s2/favicons?domain=dronahq.com&amp;sz=64"
+                            width="40"
+                            height="40"
+                            alt=""
+                            decoding="async"
+                        />
+                        <div class="job-head-text">
+                            <h3 class="job-title">
+                                <a href="https://www.dronahq.com/" rel="noopener noreferrer">DronaHQ</a>, Software Engineer
+                            </h3>
+                            <p class="job-meta">Mumbai, India · Feb 2024 to present</p>
+                        </div>
+                    </div>
+                    <ul class="job-list">
+                        <li>Architected and implemented an AI copilot for configuring and creating agents: CopilotKit on the frontend, LangGraph for backend orchestration, tool calls into platform services, contextual retrieval from a Qdrant vector database, and flows that mutate application state from the UI.</li>
+                        <li>Developed an AI guardrails system with policy and configuration UIs, FastAPI services, and Python libraries using LangChain and LangGraph to enforce safe, constrained agentic workflows.</li>
+                        <li>Designed and built a widget editor for custom React-based widgets and integrated it with the agent chat runtime so agents can render and interact with user-defined UI during conversations.</li>
+                        <li>Owned large React and TypeScript frontend systems for core visual builders (workflows, actions, data bindings) on a configuration-driven platform; restructured component hierarchies and state to reduce authoring time and UI defects; used Chrome DevTools to profile renders, listeners, and memory and to resolve leaks and excessive listeners across shared controls.</li>
+                        <li>Built a VS Code extension in TypeScript using the VS Code API, with Node.js and Express services, JWT-based authentication to the platform, and preview, edit, and commit workflows from the editor.</li>
+                    </ul>
+                </article>
+            </section>
 
+            <section class="card" aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Selected projects</h2>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <div class="project-top">
+                            <a class="project-name" href="https://github.com/vivekx01/ai-watchdog" rel="noopener noreferrer">ai-watchdog</a>
+                            <span class="project-lang">Python</span>
+                        </div>
+                        <p class="project-desc">
+                            Checks prompts and model output for sketchy patterns and applies rules you configure. Python, meant to be easy to plug in.
+                        </p>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-top">
+                            <a class="project-name" href="https://github.com/vivekx01/spendin" rel="noopener noreferrer">spendin</a>
+                            <span class="project-lang">TypeScript</span>
+                        </div>
+                        <p class="project-desc">
+                            Side project idea for personal finance in one place. TypeScript, trying to keep the codebase something I’d still want to open in six months.
+                        </p>
+                    </li>
+                    <li class="project-item">
+                        <div class="project-top">
+                            <a class="project-name" href="https://github.com/vivekx01/blockchain-voting-system" rel="noopener noreferrer">blockchain-voting-system</a>
+                            <span class="project-lang">TypeScript</span>
+                        </div>
+                        <p class="project-desc">
+                            College-era project: blockchain-ish voting demo in TypeScript, focused on keeping the flow honest and the code split into sensible pieces.
+                        </p>
+                    </li>
+                </ul>
+                <p class="projects-footer">
+                    <a class="inline-link" href="https://github.com/vivekx01?tab=repositories" rel="noopener noreferrer">All repositories on GitHub</a>
+                </p>
+            </section>
+
+            <section class="card" aria-labelledby="education-heading">
+                <h2 id="education-heading">Education</h2>
+
+                <div class="edu-block">
+                    <p class="edu-line">Master of Computer Applications (MCA)</p>
+                    <p class="edu-detail">University of Mumbai · Mumbai, India · 2022 to 2024</p>
+                </div>
+
+                <div class="edu-block">
+                    <p class="edu-line">Bachelor of Science, Computer Science (B.Sc. CS)</p>
+                    <p class="edu-detail">University of Mumbai · Mumbai, India · 2019 to 2022</p>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="skills-heading">
+                <h2 id="skills-heading">Skills</h2>
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Redux</span>
+                            <span class="skill-tag">Zustand</span>
+                            <span class="skill-tag">TanStack React Query</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Expo</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">SQLAlchemy</span>
+                            <span class="skill-tag">Alembic</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Databases</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Redis</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>AI / agentic</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">CopilotKit</span>
+                            <span class="skill-tag">Qdrant</span>
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">Anthropic API</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Tooling</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Webpack</span>
+                            <span class="skill-tag">VS Code API</span>
+                            <span class="skill-tag">Chrome DevTools</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">Bash</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contact</h2>
+                <ul class="contact-list">
+                    <li>
+                        <span class="label">GitHub</span>
+                        <a href="https://github.com/vivekx01" rel="noopener noreferrer">github.com/vivekx01</a>
+                    </li>
+                    <li>
+                        <span class="label">Email</span>
+                        <a href="mailto:vivek77158@gmail.com">vivek77158@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="label">X</span>
+                        <a href="https://x.com/vivekx01" rel="noopener noreferrer">@vivekx01</a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© <span id="y"></span> Vivek Shukla</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
