@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Vivek Shukla, software engineer in Mumbai. React, TypeScript, Python, AI systems with guardrails. Writes on tech and life." />
+    <meta name="description" content="Vivek Shukla — software engineer in Mumbai building AI systems, agentic workflows, and the frontends that make them usable." />
     <title>Vivek Shukla</title>
     <link rel="icon" href="images/favicon.ico" sizes="any" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,6 +28,7 @@
             <div class="header-text">
                 <h1 class="name">Vivek Shukla</h1>
                 <p class="role">Software Engineer</p>
+                <p class="tagline">Building AI systems and the interfaces that make them work.</p>
             </div>
         </header>
 
@@ -35,13 +36,12 @@
             <section class="card" aria-labelledby="about-heading">
                 <h2 id="about-heading">About</h2>
                 <p>
-                    I'm a software engineer based in Mumbai. I spend most of my time in React, TypeScript, Python, and the path between what users see and the data and services behind it.
-                    I like following a feature all the way through and leaving code the next person can still read. Lately that's meant a lot of AI-shaped work (copilots, guardrails, agents), and I care whether it still makes sense when production gets noisy.
+                    Software engineer in Mumbai. At DronaHQ I build the AI infrastructure and frontend systems behind an enterprise platform: copilots, guardrails, widget runtimes, and the visual builders that configure them. I follow a feature all the way through and care whether the system still holds up when production gets noisy.
                 </p>
                 <p>
-                    I write to think: technical pieces and life off the keyboard. If you want more of that voice than fits here, there's the blog.
+                    Outside work I'm building <a href="https://github.com/vivekx01/nexus" rel="noopener noreferrer">Nexus</a>, a deep agent harness for orchestrating fleets of specialized sub-agents. I also write: technical pieces and life off the keyboard.
                 </p>
-                <a class="inline-link inline-link--cta" href="/blog">Check my writings</a>
+                <a class="inline-link inline-link--cta" href="/blog">Read my writing</a>
             </section>
 
             <section class="card" aria-labelledby="experience-heading">
@@ -59,40 +59,54 @@
                         />
                         <div class="job-head-text">
                             <h3 class="job-title">
-                                <a href="https://www.dronahq.com/" rel="noopener noreferrer">DronaHQ</a>, Software Engineer
+                                <a href="https://www.dronahq.com/" rel="noopener noreferrer">DronaHQ</a> · Software Engineer
                             </h3>
-                            <p class="job-meta">Mumbai, India · Feb 2024 to present</p>
+                            <p class="job-meta">Feb 2024 – Present · Mumbai, India</p>
                         </div>
                     </div>
+                    <p class="job-tagline">Enterprise platform for building internal tools and AI-powered agentic workflows.</p>
                     <ul class="job-list">
-                        <li>Architected and implemented an AI copilot for configuring and creating agents: CopilotKit on the frontend, LangGraph for backend orchestration, tool calls into platform services, contextual retrieval from a Qdrant vector database, and flows that mutate application state from the UI.</li>
-                        <li>Developed an AI guardrails system with policy and configuration UIs, FastAPI services, and Python libraries using LangChain and LangGraph to enforce safe, constrained agentic workflows.</li>
-                        <li>Designed and built a widget editor for custom React-based widgets and integrated it with the agent chat runtime so agents can render and interact with user-defined UI during conversations.</li>
-                        <li>Owned large React and TypeScript frontend systems for core visual builders (workflows, actions, data bindings) on a configuration-driven platform; restructured component hierarchies and state to reduce authoring time and UI defects; used Chrome DevTools to profile renders, listeners, and memory and to resolve leaks and excessive listeners across shared controls.</li>
-                        <li>Built a VS Code extension in TypeScript using the VS Code API, with Node.js and Express services, JWT-based authentication to the platform, and preview, edit, and commit workflows from the editor.</li>
+                        <li>Architected and implemented an AI Copilot enabling users to configure and create agents by mutating frontend state, invoking backend tools, and retrieving contextual knowledge from a Qdrant vector database, with CopilotKit on the frontend and LangGraph for backend orchestration.</li>
+                        <li>Developed an AI Guardrails system with frontend configuration and policy management UIs, backend APIs, and core Python libraries using FastAPI, LangChain, and LangGraph to enforce safe, constrained agentic workflows.</li>
+                        <li>Designed and built a Widget Editor system letting users author custom React-based widgets and integrated it into the agent chat runtime so agents could dynamically render and interact with user-defined UI during conversations.</li>
+                        <li>Owned and built complex React and TypeScript frontend systems powering core visual builders for workflows, actions, and data bindings across a large configuration-driven low-code and agentic platform.</li>
+                        <li>Built a VS Code extension using TypeScript and the VS Code API, backed by Node.js and Express services, with JWT-based authentication to the platform and real-time preview, edit, and commit workflows from the editor.</li>
+                        <li>Improved frontend performance and stability by profiling render cycles, event listeners, and memory in Chrome DevTools, resolving memory leaks and excessive listeners across reusable and prebuilt controls.</li>
                     </ul>
                 </article>
             </section>
 
             <section class="card" aria-labelledby="projects-heading">
-                <h2 id="projects-heading">Selected projects</h2>
+                <h2 id="projects-heading">Projects</h2>
                 <ul class="project-list">
+                    <li class="project-item">
+                        <div class="project-top">
+                            <a class="project-name" href="https://github.com/vivekx01/nexus" rel="noopener noreferrer">nexus</a>
+                            <span class="project-lang">Python</span>
+                            <span class="project-badge project-badge--active">building</span>
+                        </div>
+                        <p class="project-desc">
+                            A DeepAgent harness that orchestrates a fleet of highly specialized sub-agents. Built for structured control, coordination, and persistent context across long-running agentic tasks.
+                        </p>
+                    </li>
                     <li class="project-item">
                         <div class="project-top">
                             <a class="project-name" href="https://github.com/vivekx01/ai-watchdog" rel="noopener noreferrer">ai-watchdog</a>
                             <span class="project-lang">Python</span>
+                            <span class="project-badge project-badge--active">building</span>
                         </div>
                         <p class="project-desc">
-                            Checks prompts and model output for sketchy patterns and applies rules you configure. Python, meant to be easy to plug in.
+                            Modular content safety library for LLM applications. Analyzes prompts and model outputs for unsafe patterns and enforces configurable rules. Easy to drop into any Python AI stack.
                         </p>
                     </li>
                     <li class="project-item">
                         <div class="project-top">
                             <a class="project-name" href="https://github.com/vivekx01/spendin" rel="noopener noreferrer">spendin</a>
                             <span class="project-lang">TypeScript</span>
+                            <span class="project-badge project-badge--active">building</span>
                         </div>
                         <p class="project-desc">
-                            Side project idea for personal finance in one place. TypeScript, trying to keep the codebase something I’d still want to open in six months.
+                            Personal finance app for tracking spending across accounts in one place. TypeScript and React Native, built to be something I'd actually use.
                         </p>
                     </li>
                     <li class="project-item">
@@ -101,27 +115,13 @@
                             <span class="project-lang">TypeScript</span>
                         </div>
                         <p class="project-desc">
-                            College-era project: blockchain-ish voting demo in TypeScript, focused on keeping the flow honest and the code split into sensible pieces.
+                            College-era project: a blockchain-based voting system in TypeScript, focused on keeping the flow honest and the codebase well-structured.
                         </p>
                     </li>
                 </ul>
                 <p class="projects-footer">
                     <a class="inline-link" href="https://github.com/vivekx01?tab=repositories" rel="noopener noreferrer">All repositories on GitHub</a>
                 </p>
-            </section>
-
-            <section class="card" aria-labelledby="education-heading">
-                <h2 id="education-heading">Education</h2>
-
-                <div class="edu-block">
-                    <p class="edu-line">Master of Computer Applications (MCA)</p>
-                    <p class="edu-detail">University of Mumbai · Mumbai, India · 2022 to 2024</p>
-                </div>
-
-                <div class="edu-block">
-                    <p class="edu-line">Bachelor of Science, Computer Science (B.Sc. CS)</p>
-                    <p class="edu-detail">University of Mumbai · Mumbai, India · 2019 to 2022</p>
-                </div>
             </section>
 
             <section class="card" aria-labelledby="skills-heading">
@@ -134,7 +134,7 @@
                             <span class="skill-tag">TypeScript</span>
                             <span class="skill-tag">Redux</span>
                             <span class="skill-tag">Zustand</span>
-                            <span class="skill-tag">TanStack React Query</span>
+                            <span class="skill-tag">TanStack Query</span>
                             <span class="skill-tag">Tailwind CSS</span>
                             <span class="skill-tag">React Native</span>
                             <span class="skill-tag">Expo</span>
@@ -184,6 +184,20 @@
                             <span class="skill-tag">Bash</span>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="education-heading">
+                <h2 id="education-heading">Education</h2>
+
+                <div class="edu-block">
+                    <p class="edu-line">Master of Computer Applications (MCA)</p>
+                    <p class="edu-detail">University of Mumbai · 2022 – 2024</p>
+                </div>
+
+                <div class="edu-block">
+                    <p class="edu-line">Bachelor of Science, Computer Science (B.Sc. CS)</p>
+                    <p class="edu-detail">University of Mumbai · 2019 – 2022</p>
                 </div>
             </section>
 
