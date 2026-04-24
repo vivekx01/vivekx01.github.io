@@ -5,6 +5,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Vivek Shukla — software engineer in Mumbai building AI systems, agentic workflows, and the frontends that make them usable." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vivekx01.github.io/" />
+    <meta property="og:title" content="Vivek Shukla" />
+    <meta property="og:description" content="Software engineer in Mumbai building AI systems, agentic workflows, and the frontends that make them usable." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@vivekx01" />
+    <meta name="twitter:title" content="Vivek Shukla" />
+    <meta name="twitter:description" content="Software engineer in Mumbai building AI systems, agentic workflows, and the frontends that make them usable." />
+
     <title>Vivek Shukla</title>
     <link rel="icon" href="images/favicon.ico" sizes="any" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,6 +53,16 @@
                     Outside work I'm building <a href="https://github.com/vivekx01/nexus" rel="noopener noreferrer">Nexus</a>, a deep agent harness for orchestrating fleets of specialized sub-agents. I also write: technical pieces and life off the keyboard.
                 </p>
                 <a class="inline-link inline-link--cta" href="/blog">Read my writing</a>
+            </section>
+
+            <section class="card" aria-labelledby="now-heading">
+                <h2 id="now-heading">Now</h2>
+                <p>
+                    Mostly inside Nexus right now, working through the harder parts of agent coordination and persistent context across long-running tasks. At work, pushing deeper into agentic UI patterns and thinking about how agents actually behave in production versus how they're designed to.
+                </p>
+                <p>
+                    Reading a lot. Writing when something sticks.
+                </p>
             </section>
 
             <section class="card" aria-labelledby="experience-heading">
@@ -107,15 +128,6 @@
                         </div>
                         <p class="project-desc">
                             Personal finance app for tracking spending across accounts in one place. TypeScript and React Native, built to be something I'd actually use.
-                        </p>
-                    </li>
-                    <li class="project-item">
-                        <div class="project-top">
-                            <a class="project-name" href="https://github.com/vivekx01/blockchain-voting-system" rel="noopener noreferrer">blockchain-voting-system</a>
-                            <span class="project-lang">TypeScript</span>
-                        </div>
-                        <p class="project-desc">
-                            College-era project: a blockchain-based voting system in TypeScript, focused on keeping the flow honest and the codebase well-structured.
                         </p>
                     </li>
                 </ul>
@@ -203,6 +215,7 @@
 
             <section class="card" aria-labelledby="contact-heading">
                 <h2 id="contact-heading">Contact</h2>
+                <p class="contact-intro">Open to interesting problems. If something here resonates, reach out.</p>
                 <ul class="contact-list">
                     <li>
                         <span class="label">GitHub</span>
@@ -230,6 +243,20 @@
     </div>
     <script>
         document.getElementById("y").textContent = new Date().getFullYear();
+
+        const observer = new IntersectionObserver(
+            (entries) => entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add("visible");
+                    observer.unobserve(e.target);
+                }
+            }),
+            { threshold: 0.08 }
+        );
+        document.querySelectorAll(".card, .site-header").forEach(el => {
+            el.setAttribute("data-hidden", "");
+            observer.observe(el);
+        });
     </script>
 </body>
 

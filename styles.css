@@ -305,7 +305,7 @@ main {
 }
 
 .project-item:last-child {
-    padding-bottom: 0;
+    padding-bottom: 1.25rem;
     border-bottom: none;
 }
 
@@ -489,6 +489,27 @@ main {
     padding-top: 0.5rem;
 }
 
+/* ── Scroll fade-in ── */
+
+[data-hidden] {
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+[data-hidden].visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* ── Contact intro ── */
+
+.card p.contact-intro {
+    margin: 0 0 1.1rem;
+    color: var(--muted);
+    font-size: 0.9375rem;
+}
+
 /* ── Motion ── */
 
 @media (prefers-reduced-motion: reduce) {
@@ -507,5 +528,10 @@ main {
     .site-header::before,
     .card::before {
         animation: none;
+    }
+
+    [data-hidden] {
+        opacity: 1;
+        transform: none;
     }
 }
