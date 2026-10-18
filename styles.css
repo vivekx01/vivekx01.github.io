@@ -12,16 +12,6 @@
     --mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
-@property --beam-angle {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
-}
-
-@keyframes border-beam {
-    to { --beam-angle: 360deg; }
-}
-
 *,
 *::before,
 *::after {
@@ -59,9 +49,9 @@ a:focus-visible {
 }
 
 .wrap {
-    max-width: 42rem;
+    max-width: 64rem;
     margin: 0 auto;
-    padding: clamp(2.5rem, 8vw, 4.5rem) clamp(1.25rem, 5vw, 1.75rem) 4rem;
+    padding: clamp(2.5rem, 8vw, 4.5rem) clamp(1.25rem, 4vw, 2.5rem) 4rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -148,45 +138,6 @@ main {
     border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Revolving light beam on card borders */
-.site-header::before,
-.card::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: calc(var(--radius) + 1px);
-    padding: 1px;
-    background: conic-gradient(
-        from var(--beam-angle),
-        transparent 0%,
-        transparent 60%,
-        rgba(255, 255, 255, 0.15) 72%,
-        rgba(255, 255, 255, 0.55) 80%,
-        rgba(255, 255, 255, 0.15) 88%,
-        transparent 100%
-    );
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    animation: border-beam 8s linear infinite;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Stagger each card so beams don't all sync up */
-.site-header::before          { animation-delay:  0s;    }
-.card:nth-child(1)::before    { animation-delay: -1.1s;  }
-.card:nth-child(2)::before    { animation-delay: -2.4s;  }
-.card:nth-child(3)::before    { animation-delay: -3.7s;  }
-.card:nth-child(4)::before    { animation-delay: -5.0s;  }
-.card:nth-child(5)::before    { animation-delay: -6.1s;  }
-.card:nth-child(6)::before    { animation-delay: -7.3s;  }
-
 .card h2 {
     font-family: var(--mono);
     font-size: 0.7rem;
@@ -236,6 +187,12 @@ main {
     border: 1px solid var(--border);
     object-fit: contain;
     padding: 6px;
+}
+
+.job-logo--vantrock {
+    background: #03102a;
+    border-color: #03102a;
+    padding: 3px;
 }
 
 .job-head-text {
@@ -523,11 +480,6 @@ main {
     .inline-link::after,
     .inline-link--cta {
         transition: none;
-    }
-
-    .site-header::before,
-    .card::before {
-        animation: none;
     }
 
     [data-hidden] {
